@@ -1,13 +1,16 @@
 {
   "name": "terminal",
   "description": "explore-it robot terminal",
-  "version": "1.0.0-RC1",
+  "version": "1.0.0-RC2",
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest"
   },
   "dependencies": {
+    "appcenter": "^1.9.0",
+    "appcenter-analytics": "^1.9.0",
+    "appcenter-crashes": "^1.9.0",
     "buffer": "^5.2.1",
     "i18n-js": "^3.0.11",
     "moment": "^2.22.2",

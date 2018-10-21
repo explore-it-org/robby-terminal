@@ -30,16 +30,29 @@ service uuid:        0000ffe0-0000-1000-8000-00805f9b34fb
 characteristic uuid: 0000ffe1-0000-1000-8000-00805f9b34fb
 ```
 
-## Hints upgrading to new react native versions
+## Hints upgrading to new React-Native (RN) versions
 
-### Version 0.56.0
+### RN Version 0.56.0
 
 On Windows, there seems to be a bug with version 0.56.0 of React Native. A proposed [fix](https://github.com/facebook/react-native/issues/20331) is to use version 0.55.4.
 
-### Version 0.57.1
+### RNVersion 0.57.1
 
 Task: 
-    Renaming of project and upgrading from v0.56.0 to v0.75.1
+    Renaming of project and upgrading from v0.56.0 to v0.57.1
+
+Idea: 
+    Start new React Native project from scratch with new name 'terminal' and copy all missing artefacts from the old project.
+
+```
+$ react-native init terminal
+$ cd terminal
+```
+
+### RN Version 0.57.3
+
+Task: 
+    Renaming of project and upgrading from v0.57.1 to v0.57.3
 
 Idea: 
     Start new React Native project from scratch with new name 'terminal' and copy all missing artefacts from the old project.
@@ -51,12 +64,7 @@ $ cd terminal
 
 ### Issues
 
-1. See https://github.com/facebook/react-native/issues/21310
-
-    ```
-    $ npm install --save-dev @babel/core
-    $ npm install --save-dev @babel/runtime
-    ````
+1. Testing in simulators on localhost
 
     Testing on android; should work!
 
@@ -81,7 +89,6 @@ $ cd terminal
 
     ```
     $ react-native link react-native-languages
-    $ react-native link react-native-vector-icons
     ```
 
 4. You can use free Web Services to create the iconset for both android and ios.
@@ -97,3 +104,7 @@ $ cd terminal
         e.g. http://appiconmaker.co/
 
         Add launcher icons to ios project under 'ios/terminal/Images.xcassets'
+
+5. Add AppCenter
+
+    
