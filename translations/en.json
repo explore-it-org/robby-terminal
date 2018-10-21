@@ -1,0 +1,26 @@
+{
+    "instruction": {
+        "command": "Type your command in Command Box below.",
+        "trash": "Click on Trash Header Button to clear log.",
+        "send": "Click on Arrow Button to send command to the BLE device.",
+        "scan": "Click on Plug Header Button to scan for devices."
+    },
+    "input": {
+        "placeholder": "your command"
+    },
+    "message": {
+        "enable-bluetooth": "Enable Bluetooth first! Restart App!",
+        "connecting": "Connect to robot",
+        "connected": "Connected to robot",
+        "disconnected": "Disconnected from robot",
+        "nodevice-connected": "No robot connected",
+        "scanning": "Start scanning...",
+        "found-device": "Found robot",
+        "no-devices-found": "No EXPLORE-IT devices found!",
+        "scan-error": "Scanning does not work properly",
+        "bluetooth-error": "Bluetooth error. Check Bluetooth on smartphone",
+        "pick-device": "Pick one roboter",
+        "no-device-selected": "No robot selected"
+
+    }
+}

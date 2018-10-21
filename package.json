@@ -1,14 +1,21 @@
 {
   "name": "terminal",
-  "version": "0.0.1",
+  "description": "explore-it robot terminal",
+  "version": "1.0.0-RC1",
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest"
   },
   "dependencies": {
+    "buffer": "^5.2.1",
+    "i18n-js": "^3.0.11",
+    "moment": "^2.22.2",
     "react": "16.6.0-alpha.8af6728",
-    "react-native": "0.57.3"
+    "react-native": "0.57.3",
+    "react-native-ble-plx": "^1.0.0",
+    "react-native-languages": "^3.0.1",
+    "react-native-material-dialog": "^0.7.4"
   },
   "devDependencies": {
     "babel-jest": "23.6.0",

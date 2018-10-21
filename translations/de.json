@@ -1,0 +1,25 @@
+{
+    "instruction": {
+        "command": "Schreib dein Kommando unten in die Box.",
+        "trash": "Klicke auf das Trash Icon oben rechts, um Log zu löschen.",
+        "send": "Klicke auf das Pfeil Icon unten, um dein Kommando abzusenden.",
+        "scan": "Klicke auf das Schalter Icon oben, um Scan zu starten."
+    },
+    "input": {
+        "placeholder": "Dein Kommando"
+    },
+    "message": {
+        "enable-bluetooth": "Aktiviere Bluetooth zuerst! Dann App neu starten!",
+        "connecting": "Verbindsaufbau mit Roboter",
+        "connected": "Verbunden mit Roboter",
+        "disconnected": "Getrennt vom Roboter",
+        "nodevice-connected": "Kein Roboter ist verbunden",
+        "scanning": "Start Robotersuche...",
+        "found-device": "Roboter gefunden:",
+        "no-devices-found": "Keine EXPLORE-IT Roboter gefunden!",
+        "scan-error": "Fehler im Verbindungsaufbau.",
+        "bluetooth-error": "Bluetooth Fehler. Überprüfe Bluetooth auf dem Smartphone",
+        "pick-device": "Wähle einen Roboter",
+        "no-device-selected": "Kein Roboter ausgewählt"
+    }
+}
