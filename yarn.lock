@@ -1628,7 +1628,7 @@ buffer-from@^1.0.0:
   resolved "https://registry.yarnpkg.com/buffer-from/-/buffer-from-1.1.1.tgz#32713bc028f75c02fdb710d7c7bcec1f2c6070ef"
   integrity sha512-MQcXEUbCKtEo7bhqEs6560Hyd4XaovZlO/k9V3hjVUF/zwW7KBVdSK4gIt/bzwS9MbR5qob+F5jusZsb0YQK2A==
 
-buffer@^5.2.1:
+buffer@5.2.1:
   version "5.2.1"
   resolved "https://registry.yarnpkg.com/buffer/-/buffer-5.2.1.tgz#dd57fa0f109ac59c602479044dca7b8b3d0b71d6"
   integrity sha512-c+Ko0loDaFfuPWiL02ls9Xd3GO3cPVmUobQ6t3rXNUk304u6hGq+8N/kFi+QEIKhzK3uwolVhLzszmfLmMLnqg==
@@ -2843,7 +2843,7 @@ http-signature@~1.2.0:
     jsprim "^1.2.2"
     sshpk "^1.7.0"
 
-i18n-js@^3.0.11:
+i18n-js@3.0.11:
   version "3.0.11"
   resolved "https://registry.yarnpkg.com/i18n-js/-/i18n-js-3.0.11.tgz#f9e96bdb641c5b9d6be12759d7c422089987ef02"
   integrity sha512-v7dG3kYJTQTyox3NqDabPDE/ZotWntyMI9kh4cYi+XlCSnsIR+KBTS2opPyObL8WndnklcLzbNU92FP/mLge3Q==
@@ -4239,7 +4239,7 @@ mkdirp@^0.5.0, mkdirp@^0.5.1:
   dependencies:
     minimist "0.0.8"
 
-moment@^2.22.2:
+moment@2.22.2:
   version "2.22.2"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.2.tgz#3c257f9839fc0e93ff53149632239eb90783ff66"
   integrity sha1-PCV/mDn8DpP/UxSWMiOeuQeD/2Y=
@@ -4918,17 +4918,17 @@ react-is@^16.6.0-alpha.8af6728:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.6.0-alpha.8af6728.tgz#3ce01f13f164b90a76ad902735834fc12d06e30e"
   integrity sha512-F65AeMavskvRglteO7dC0Nvq3Br1ESnpCOG5M6fenQX52Uhpt6eCI0vL3ICM/hnVhIOQY2fwnSWtST33OlgxVA==
 
-react-native-ble-plx@^1.0.0:
+react-native-ble-plx@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/react-native-ble-plx/-/react-native-ble-plx-1.0.0.tgz#a214c9c9620ccc09fdbf8b7c7d27298d24ecf89d"
   integrity sha512-QJpUs7UekhV/a84YeCQR+krzpi/zXW8PRcHRU3Lfh6oHViLjePGykpCSOcmBlEiDvxbiSKWZNVt40P4pfFU9dA==
 
-react-native-languages@^3.0.1:
+react-native-languages@3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/react-native-languages/-/react-native-languages-3.0.1.tgz#a35cf89e69e6722205d96cf418411444c328e6c2"
   integrity sha512-D9L3WZLci0L/XZLhzKKiBisj17VQQvEW29FgaTJBV3gnITYy7uxdp0Zwi4xd+Rdus5r+cjWkoNKcGks6zMlZkA==
 
-react-native-material-dialog@^0.7.4:
+react-native-material-dialog@0.7.4:
   version "0.7.4"
   resolved "https://registry.yarnpkg.com/react-native-material-dialog/-/react-native-material-dialog-0.7.4.tgz#fa70861b08331a3dc320a1b9dd39f81cc9ca6df2"
   integrity sha512-4WD2+oXEhRFRA3B8syHPNwzP8G/zFE6Qw/hLfkZziitW0HIGY4/d4aLq+S1SnVW4voNvzRRnRUrbX8xTH+JVxQ==
@@ -4949,6 +4949,15 @@ react-native-vector-icons@^4.2.0:
   dependencies:
     lodash "^4.0.0"
     prop-types "^15.5.10"
+    yargs "^8.0.2"
+
+react-native-vector-icons@^6.0.2:
+  version "6.0.2"
+  resolved "https://registry.yarnpkg.com/react-native-vector-icons/-/react-native-vector-icons-6.0.2.tgz#826252a72d648cf957d46ada8df890318dac53e1"
+  integrity sha512-Zo0Jo4pIGDVvSrtvgRtaphz77H1RUF3nPxJXbwS/HzUtfOpMzLmjmezYQceWcrAhVimP1VvXeGQ/sSwnl5TgEw==
+  dependencies:
+    lodash "^4.0.0"
+    prop-types "^15.6.2"
     yargs "^8.0.2"
 
 react-native@0.57.3:

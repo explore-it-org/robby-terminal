@@ -13,4 +13,6 @@ target 'terminal' do
   
 
   platform :ios, '9.0'
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
 end
