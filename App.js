@@ -144,7 +144,6 @@ export default class App extends Component {
     } else {
       this.disconnect();
       let res = this.state.logMessage.split('\n');
-      console.log(res);
       if (res.length == 2) {
         this.clearLog();
       }

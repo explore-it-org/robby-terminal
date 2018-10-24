@@ -33,7 +33,6 @@ class Input extends React.Component {
         )
     }
     onSendButton = () => {
-        console.log(this.state.sendText);
         this.props.sendCommand(this.state.sendText);
         this.setState({
             sendText: ''

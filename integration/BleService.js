@@ -48,7 +48,6 @@ class BleService {
     this.manager.startDeviceScan(services, null, (error, device) => {
       if (error) {
         // Handle error (scanning will be stopped automatically)
-        console.log('Error: ' + error);
         errorHandler(error);
         return
       }
