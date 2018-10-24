@@ -106,12 +106,6 @@ class BleService {
     return this.actDevice;
   }
 
-  connectToActualDevice() {
-    if (this.actDevice) {
-      console.log('actual device is set to ' + this.actDevice.name);
-    }
-  }
-
   sendCommandToActDevice(command) {
     if (this.actDevice) {
       this.actDevice.writeCharacteristicWithResponseForService(
