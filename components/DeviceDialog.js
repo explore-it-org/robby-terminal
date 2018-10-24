@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text } from 'react-native';
-import { SinglePickerMaterialDialog } from 'react-native-material-dialog';
+import SinglePickerMaterialDialog from './dialog/SinglePickerMaterialDialog';
 import i18n from '../i18n';
 
 class DeviceDialog extends React.Component {
