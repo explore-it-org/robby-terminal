@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text } from 'react-native';
-import { SinglePickerMaterialDialog } from 'react-native-material-dialog';
+import SinglePickerMaterialDialog from './dialog/SinglePickerMaterialDialog';
 import i18n from '../i18n';
 
 class DeviceDialog extends React.Component {
@@ -15,7 +15,8 @@ class DeviceDialog extends React.Component {
       return (
         <SinglePickerMaterialDialog
           title={i18n.t('message.pick-device')}
-          items={this.props.devices.map((row, index) => ({ value: index, label: row }))}
+          // By default, the list looks for a key prop on each item and uses that for the React key.
+          items={this.props.devices.map((row, index) => ({ key: index.toString(), label: row }))}
           visible={this.props.isScanning}
           selectedItem={this.state.singlePickerSelectedItem}
           onCancel={() => this.props.onCancel()}

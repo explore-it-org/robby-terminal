@@ -4838,7 +4838,7 @@ prompts@^0.1.9:
     kleur "^2.0.1"
     sisteransi "^0.1.1"
 
-prop-types@^15.5.10, prop-types@^15.5.8, prop-types@^15.6.2:
+prop-types@^15.5.8, prop-types@^15.6.2:
   version "15.6.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.2.tgz#05d5ca77b4453e985d60fc7ff8c859094a497102"
   integrity sha512-3pboPvLiWD7dkI3qf3KbUe6hKFKa52w+AE0VCqECtf+QHAKgOL37tTaNCnuX1nAAQ4ZhyP+kYVKf8rLmJ/feDQ==
@@ -4928,28 +4928,10 @@ react-native-languages@3.0.1:
   resolved "https://registry.yarnpkg.com/react-native-languages/-/react-native-languages-3.0.1.tgz#a35cf89e69e6722205d96cf418411444c328e6c2"
   integrity sha512-D9L3WZLci0L/XZLhzKKiBisj17VQQvEW29FgaTJBV3gnITYy7uxdp0Zwi4xd+Rdus5r+cjWkoNKcGks6zMlZkA==
 
-react-native-material-dialog@0.7.4:
-  version "0.7.4"
-  resolved "https://registry.yarnpkg.com/react-native-material-dialog/-/react-native-material-dialog-0.7.4.tgz#fa70861b08331a3dc320a1b9dd39f81cc9ca6df2"
-  integrity sha512-4WD2+oXEhRFRA3B8syHPNwzP8G/zFE6Qw/hLfkZziitW0HIGY4/d4aLq+S1SnVW4voNvzRRnRUrbX8xTH+JVxQ==
-  dependencies:
-    prop-types "^15.5.10"
-    react-native-typography "^1.0.3"
-    react-native-vector-icons "^4.2.0"
-
-react-native-typography@^1.0.3:
+react-native-typography@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/react-native-typography/-/react-native-typography-1.4.0.tgz#166b79c618075882d8af07720649f5bc6523160d"
   integrity sha512-3lToN3hRvPySw0PWCn1SjbDbNaqlV+FM22zSuymIc2ILGcfWbWcgZ+qdX+VKtHAewMG7Rp5yab2bmuaEYQlu3Q==
-
-react-native-vector-icons@^4.2.0:
-  version "4.6.0"
-  resolved "https://registry.yarnpkg.com/react-native-vector-icons/-/react-native-vector-icons-4.6.0.tgz#e4014311ffa6de397d914ffc31b7097a874cc8d5"
-  integrity sha512-rpfhfPiXCK2PX1nrNhdxSMrEGB/Gw/SvKoPM0G2wAkSoqynnes19K0VYI+Up7DqR1rFIpE4hP2erpT1tNx2tfg==
-  dependencies:
-    lodash "^4.0.0"
-    prop-types "^15.5.10"
-    yargs "^8.0.2"
 
 react-native-vector-icons@^6.0.2:
   version "6.0.2"
