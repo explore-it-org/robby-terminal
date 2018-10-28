@@ -1,7 +1,7 @@
 {
   "name": "terminal",
   "description": "explore-it robot terminal",
-  "version": "1.0.0-RC3",
+  "version": "1.0.0-Alpha",
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",

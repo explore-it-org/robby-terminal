@@ -42,6 +42,16 @@ class BleService {
   }
 
   scanningForDevices(errorHandler, deviceHandler) {
+    // Just for testing
+    /*
+    simDevices = ['Device A', 'Device B'];
+    setTimeout(() => {
+      deviceHandler(simDevices[0]);
+    }, 100);
+    setTimeout(() => {
+      deviceHandler(simDevices[1]);
+    }, 100);
+    */
     this.devices = new Map();
     let services = [];
     services.push(serviceUUID)

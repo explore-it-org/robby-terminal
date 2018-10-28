@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { StyleSheet, Text, TouchableOpacity, View, FlatList } from 'react-native';
 import { material } from 'react-native-typography';
@@ -7,66 +7,43 @@ import MaterialDialog from './MaterialDialog';
 
 import colors from './colors';
 
-export default class SinglePickerMaterialDialog extends Component {
-  constructor(props) {
-    super(props);
+export default class SinglePickerMaterialDialog extends PureComponent {
+  state = { selectedKey: undefined };
 
-    const { items, selectedItem } = props;
-    const rows = items.map(item => Object.assign({}, item, { selected: false }));
-
-    let selectedIndex;
-    if (selectedItem != null) {
-      selectedIndex = rows.findIndex(item => item.value === selectedItem.value);
-      rows[selectedIndex] = Object.assign({}, rows[selectedIndex], {
-        selected: true,
-      });
-    }
-    this.state = { rows, selectedIndex };
+  onRowPress(item) {
+    this.setState({
+      selectedKey: item.key,
+      selectedItem: item
+    });
   }
 
-  componentWillReceiveProps(nextProps) {
-    const { items, selectedItem } = nextProps;
-    const rows = items.map(item => Object.assign({}, item, { selected: false }));
-
-    let selectedIndex;
-    if (selectedItem != null) {
-      selectedIndex = rows.findIndex(item => item.value === selectedItem.value);
-      rows[selectedIndex] = Object.assign({}, rows[selectedIndex], {
-        selected: true,
-      });
-    }
-    this.setState({ rows, selectedIndex });
-  }
-
-  onRowPress(rowID) {
-    const rows = [...this.state.rows];
-    const { selectedIndex } = this.state;
-
-    if (selectedIndex != null) {
-      rows[selectedIndex] = Object.assign({}, rows[selectedIndex], {
-        selected: false,
-      });
-    }
-    rows[rowID] = Object.assign({}, rows[rowID], { selected: true });
-    this.setState({ rows, selectedIndex: rowID });
-  }
-
-  renderItem = ({ item, index }) => (
-    <TouchableOpacity key={item.value} onPress={() => this.onRowPress(index)}>
-      <View style={styles.rowContainer}>
-        <View style={styles.iconContainer}>
-          <Icon
-            name={item.selected ? 'radio-button-checked' : 'radio-button-unchecked'}
-            color={this.props.colorAccent}
-            size={24}
-          />
+  renderItem = ({ item }) => {
+    return (
+      <TouchableOpacity key={item.value} onPress={() => this.onRowPress(item)}>
+        <View style={styles.rowContainer}>
+          <View style={styles.iconContainer}>
+            <Icon
+              name={item.selected ? 'radio-button-checked' : 'radio-button-unchecked'}
+              color={this.props.colorAccent}
+              size={24}
+            />
+          </View>
+          <Text style={material.subheading}>{item.label}</Text>
         </View>
-        <Text style={material.subheading}>{item.label}</Text>
-      </View>
-    </TouchableOpacity>
-  );
+      </TouchableOpacity>
+    )
+  };
 
   render() {
+    /*
+    Props can change so we have to re-compute the items state. Because children elements are only dependent
+    from the item list, only changes in this list will force a re-render!
+    This pattern is called "memoization helper" and replaces 'componentWillReceiveProps()' which is unsafe.
+    */
+    const rows = this.props.items.map((item => {
+      if (item.key === this.state.selectedKey) { item.selected = true } else { item.selected = false };
+      return item
+    }))
     return (
       <MaterialDialog
         title={this.props.title}
@@ -75,17 +52,18 @@ export default class SinglePickerMaterialDialog extends Component {
         visible={this.props.visible}
         okLabel={this.props.okLabel}
         scrolled={this.props.scrolled}
-        onOk={() =>
-          this.props.onOk({
-            selectedItem: this.state.rows[this.state.selectedIndex],
-          })}
         cancelLabel={this.props.cancelLabel}
         onCancel={() => {
           this.props.onCancel();
         }}
+        onOk={() => {
+          this.props.onOk({
+            selectedItem: this.state.selectedItem,
+          })
+        }}
       >
         <FlatList
-          data={this.state.rows}
+          data={rows}
           renderItem={this.renderItem}
         />
       </MaterialDialog>
@@ -109,10 +87,6 @@ const styles = StyleSheet.create({
 SinglePickerMaterialDialog.propTypes = {
   visible: PropTypes.bool.isRequired,
   items: PropTypes.arrayOf(PropTypes.object).isRequired,
-  selectedItem: PropTypes.shape({
-    value: PropTypes.any.isRequired,
-    label: PropTypes.string.isRequired,
-  }),
   title: PropTypes.string,
   titleColor: PropTypes.string,
   colorAccent: PropTypes.string,
@@ -124,7 +98,6 @@ SinglePickerMaterialDialog.propTypes = {
 };
 
 SinglePickerMaterialDialog.defaultProps = {
-  selectedItem: undefined,
   title: undefined,
   titleColor: undefined,
   colorAccent: colors.androidColorAccent,
