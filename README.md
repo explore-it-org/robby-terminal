@@ -26,10 +26,12 @@ More information can be found on [React Native's Website](https://facebook.githu
 
 ## Run App on Android
 
+**NOTE**: You will need [Java 8](https://facebook.github.io/react-native/docs/getting-started#java-development-kit).
+
 Have an Android emulator running (quickest way to get started), or a device connected
 
 ```
-$ emulator list-avds
+$ emulator -list-avds
 Nexus_6_API_25
 $ emulator @Nexus_6_API_25
 $ react-native run-android
