@@ -47,6 +47,11 @@ $ react-native run-ios
 
 to start simulator (from Xcode) and deploy app or deploy app onto attached iPhone.
 
+**NOTE**:
+
+- Several starts are needed for the first time! The whole compilation cycle takes too long to finish in time.
+- **Signing** properties in Xcode are needed. Start Xcode and go to "Signing" paragraph.
+
 # Hints for BLE support
 
 The library used in this project to support BLE is: https://github.com/Polidea/react-native-ble-plx
@@ -97,6 +102,17 @@ Idea:
 $ react-native init terminal
 $ cd terminal
 ```
+
+### RN Version 0.57.8
+
+Tasks: 
+ 1. Upgrading the project itself to v1.0.0-Beta
+ 2. Upgrading React Native from v0.57.3 to v0.57.8
+
+Steps:
+ 1. Follow instructions on [upgrade notes 0.57.8](https://github.com/react-native-community/react-native-releases/blob/master/CHANGELOG.md#0578)
+ 2. Running Xcode 10 change the build system to "Legacy Build System" as described on [github](https://github.com/facebook/react-native/issues/21631)
+
 
 ### Issues
 
