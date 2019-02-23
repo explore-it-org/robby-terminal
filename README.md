@@ -113,6 +113,27 @@ Steps:
  1. Follow instructions on [upgrade notes 0.57.8](https://github.com/react-native-community/react-native-releases/blob/master/CHANGELOG.md#0578)
  2. Running Xcode 10 change the build system to "Legacy Build System" as described on [github](https://github.com/facebook/react-native/issues/21631)
 
+### RN Version 0.58.5
+
+Task: 
+ - Renaming of project and upgrading from v0.57.8 to v0.58.5
+ - Changed form `react-native-languages` to `react-native-localize`. Update code!
+
+Idea: 
+    Start new React Native project from scratch with new name 'terminal' and copy all missing artefacts from the old project.
+
+```
+$ react-native init terminal
+$ cd terminal
+$ yarn install
+$ react-native link react-native-ble-plx
+$ react-native link react-native-localize
+```
+
+Read project [react-native-plx-ble](https://github.com/Polidea/react-native-ble-plx) carefully. Their are some updates needed 
+    
+    - for Android in `app/build.gradle` and `AndroidManifest.xml`!
+    - for iOS. Open Xcode and add empty Swift file
 
 ### Issues
 

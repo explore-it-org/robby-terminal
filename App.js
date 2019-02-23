@@ -7,8 +7,7 @@ import DeviceDialog from './components/DeviceDialog';
 import Instruction from './components/Instruction';
 import moment from 'moment';
 import packageJson from './package.json';
-import RNLanguages from 'react-native-languages';
-import i18n from './i18n';
+import * as RNLocalize from "react-native-localize";import i18n from './i18n';
 import BleService from './integration/BleService';
 
 export default class App extends Component {
@@ -30,13 +29,13 @@ export default class App extends Component {
     BleService.requestLocationPermission();
     this.checkBlueetoothState();
     AppState.addEventListener('change', this.handleAppStateChange);
-    RNLanguages.addEventListener('change', this.onLanguagesChange);
+    RNLocalize.addEventListener('change', this.onLanguagesChange);
   }
 
   componentWillUnmount() {
     this.disconnect();
     AppState.removeEventListener('change', this.handleAppStateChange);
-    RNLanguages.removeEventListener('change', this.onLanguagesChange);
+    RNLocalize.removeEventListener('change', this.onLanguagesChange);
   }
 
   onLanguagesChange = ({ language }) => {
