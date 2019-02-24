@@ -117,10 +117,11 @@ Steps:
 
 Task: 
  - Renaming of project and upgrading from v0.57.8 to v0.58.5
- - Changed form `react-native-languages` to `react-native-localize`. Update code!
+ - Changed from `react-native-languages` to `react-native-localize`, because `react-native-languages` is deprecated. **Update code!**
 
-Idea: 
-    Start new React Native project from scratch with new name 'terminal' and copy all missing artefacts from the old project.
+Actions: 
+- Start new React Native project from scratch with new name 'terminal' and copy all missing artefacts from the old project.
+- Copy image assets for android from `android/app/src/main/res` and for ios from `ios/terminal/Images.xcassets/AppIcon.appiconset`
 
 ```
 $ react-native init terminal
@@ -132,10 +133,10 @@ $ react-native link react-native-localize
 
 Read project [react-native-plx-ble](https://github.com/Polidea/react-native-ble-plx) carefully. Their are some updates needed 
     
-    - for Android in `app/build.gradle` and `AndroidManifest.xml`!
-    - for iOS. Open Xcode and add empty Swift file
+ - for Android in `app/build.gradle` and `AndroidManifest.xml`!
+ - for iOS. Open Xcode and add empty Swift file
 
-### Issues
+# Issues
 
 1. Testing in simulators on localhost
 

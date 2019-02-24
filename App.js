@@ -7,7 +7,8 @@ import DeviceDialog from './components/DeviceDialog';
 import Instruction from './components/Instruction';
 import moment from 'moment';
 import packageJson from './package.json';
-import * as RNLocalize from "react-native-localize";import i18n from './i18n';
+import * as RNLocalize from "react-native-localize";
+import i18n from './i18n';
 import BleService from './integration/BleService';
 
 export default class App extends Component {
@@ -38,8 +39,9 @@ export default class App extends Component {
     RNLocalize.removeEventListener('change', this.onLanguagesChange);
   }
 
-  onLanguagesChange = ({ language }) => {
-    i18n.locale = language;
+  onLanguagesChange = () => {
+    console.log("Language: " + RNLocalize.getLocales()[0].languageCode)
+    i18n.locale = RNLocalize.getLocales()[0].languageCode;
   };
 
   disconnect = () => {
