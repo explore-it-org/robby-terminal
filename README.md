@@ -122,6 +122,8 @@ Task:
 Actions: 
 - Start new React Native project from scratch with new name 'terminal' and copy all missing artefacts from the old project.
 - Copy image assets for android from `android/app/src/main/res` and for ios from `ios/terminal/Images.xcassets/AppIcon.appiconset`
+- Link `appcenter`
+- iOS: Check if cocoa pods is installed. If not install it `sudo gem install cocoapods`
 
 ```
 $ react-native init terminal

@@ -134,6 +134,10 @@ android {
 }
 
 dependencies {
+    implementation project(':appcenter-crashes')
+    implementation project(':appcenter-analytics')
+    implementation project(':react-native-vector-icons')
+    implementation project(':appcenter')
     implementation project(':react-native-localize')
     implementation project(':react-native-ble-plx')
     implementation fileTree(dir: "libs", include: ["*.jar"])
