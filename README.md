@@ -29,6 +29,14 @@ $ npm version minor  // increment minor number
 $ npm version major  // increment major number
 ```
 
+# Tagging Releases
+
+Use the *Annotated Tag* support by Git to tag releases on the master branch with a descriptive message like:
+
+```
+$ git tag -a v1.0.0 -m "Releasing version v1.0.0"
+```
+
 # Development Environment
 
 You'll need [Node](https://nodejs.org/en/download/), the [React Native CLI](https://facebook.github.io/react-native/docs/getting-started#the-react-native-cli) and a Text Editor like [Visual Studio Code](https://code.visualstudio.com/). That's all!
