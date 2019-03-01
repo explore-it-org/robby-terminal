@@ -1,7 +1,5 @@
 # Terminal App to control the robot from explore-it
 
-## Installation
-
 This is the entire source code of the terminal app. It is based on [react-native](https://facebook.github.io/react-native/).
 
 To build the app run
@@ -17,6 +15,19 @@ $ yarn install
 ```
 
 This will download and install all dependencies into directory ``node_modules``.
+
+# Versioning
+
+In a React Native app different tools and technologies come together, like JavaScript, npm, Android, iOS, Gradle and Xcode. This fact requires from developers to manage versioning at several locations for each app. Keeping them all in sync manually is a tedious and error prone task but fortunately, there is [react-native-version](http://www.loukasandreadelis.com/react-native-app-versioning/) tool, an easier way to do it with a single command!
+
+Examples:
+
+```
+$ npm version 0.5.0  // set app version to 0.5.0
+$ npm version patch  // increment patch number
+$ npm version minor  // increment minor number
+$ npm version major  // increment major number
+```
 
 # Development Environment
 
